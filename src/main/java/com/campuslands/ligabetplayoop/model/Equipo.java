@@ -15,6 +15,12 @@ public class Equipo {
 
     private String nombre; 
 
+    @OneToMany(mappedBy = "equipo", cascade = CascadeType.ALL)
+    private List<CuerpoTecnico> cuerpoTecnico;
+
+    @OneToMany(mappedBy = "equipo", cascade = CascadeType.ALL)
+    private List<CuerpoMedico> cuerpoMedico;
+
     @OneToMany(mappedBy = "equipo", cascade = CascadeType.ALL) 
     private List<Jugador> jugadores; 
 

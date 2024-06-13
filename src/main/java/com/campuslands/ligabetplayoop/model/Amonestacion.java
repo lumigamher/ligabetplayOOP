@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Gol {
+public class Amonestacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +24,5 @@ public class Gol {
     private Jugador jugador;
 
     private int minuto;
+    private String tipo; // "amarilla" o "roja"
 }
